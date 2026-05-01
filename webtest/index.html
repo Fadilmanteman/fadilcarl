@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <title>Fadil</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <style>
+        /* General Styles */
+        body {
+            font-family: 'Georgia', serif; /* Jenis font baru */
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background: linear-gradient(to bottom, #eef2f3, #8e9eab); /* Gradien lembut */
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 800px;
+            margin: auto;
+            /*background: #f13470;*/
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+            padding: 50px;
+            position: relative;
+            background-size: cover;
+            /*background-image: url('img/tes.jpeg');*/
+            text-align: center;
+            animation: fadeIn 1.5s ease-out;
+            overflow: hidden;
+        }
+       /* VIDEO BACKGROUND DI DALAM CONTAINER */
+.bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: center top;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 15px;
+    }
+
+    .deskripsi {
+        font-size: 14px;
+    }
+}
+/* OVERLAY BIAR TEKS KEBACA */
+.container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.4);
+    z-index: 2;
+}
+
+/* KONTEN DI ATAS VIDEO */
+.content {
+    position: relative;
+    z-index: 3;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+/* STYLE <p class=""> */
+.deskripsi {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.info {
+    font-size: 14px;
+    opacity: 0.9;
+}
+        h1 {
+            font-size: 30px;
+            color: #3a539b; /* Warna biru lembut */
+            margin-bottom: 20px;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            animation: slideIn 1.2s ease-in-out;
+        }
+
+        .arabic {
+            font-family: 'Amiri', serif; /* Font khusus untuk teks Arab */
+            font-size: 36px;
+            font-weight: bold;
+            line-height: 1.8;
+            color: #2c3e50; /* Warna biru tua */
+            text-align: right;
+            direction: rtl;
+            margin-bottom: 20px;
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        .translation {
+            font-family: 'Arial', sans-serif; /* Font lebih sederhana untuk terjemahan */
+            font-size: 35px;
+            font-weight: bold;
+            color: #f9f9f9; /* Warna abu-abu gelap */
+            line-height: 1.6;
+            animation: fadeIn 2s ease-out;
+            position: relative;
+    z-index: 3;
+    color: white;
+    text-align: center;
+    padding: 20px;
+        }
+
+        footer {
+    position: relative;
+    margin-top: 20px;
+    z-index: 5;
+    font-size: 14px;
+    color: #888;
+    animation: fadeIn 2.5s ease-out;
+    font-weight: bold; /* Membuat seluruh teks di footer tebal */
+    text-align: center;
+}
+
+
+.instagram-link {
+    color: #ffffff;
+    text-decoration: none;
+    /* Menyatukan ikon dan teks */
+    display: inline-block;
+    padding: 15px 20px;
+    align-items: center;
+    gap: 5px; /* Jarak kecil antara ikon dan @username */
+    transition: 0.3s;
+}
+
+.instagram-link:hover {
+    color: #E1306C; /* Warna berubah saat disentuh kursor */
+    text-decoration: underline;
+}
+
+/* Memastikan ukuran ikon pas dengan teks */
+.instagram-link i {
+    font-size: 17px;
+}
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-100%);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        /* Audio Styles */
+        .audio-control {
+            margin-top: 20px;
+        }
+
+        .audio-control button {
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #3a539b;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .audio-control button:hover {
+            background-color: #2c3e50;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+    <video class="bg-video" autoplay muted loop playsinline>
+        <source src="video/vid.mp4" type="video/mp4">
+    </video>
+        <h1></h1>
+        <h1></h1>
+        
+        <div class="content">
+             <p class="deskripsi">CARLINA❤️</p>
+            
+        </div>
+        <footer class="footer">
+            <a href="https://www.instagram.com/fadil.manteman?igsh=MTY2cWV6c2thMGxxNQ==" target="_blank" rel="noopener noreferrer" class="instagram-link">
+                <i class="fab fa-instagram"></i>@fadil.manteman
+</a>
+        </footer>
+    </div>
+</body>
+</html>
